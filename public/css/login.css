@@ -1,4 +1,4 @@
-body {
+body { /*strona startowa*/
     width: 100%;
     height: 100%;
     position: fixed;
@@ -8,11 +8,7 @@ body {
     padding: 0;
 }
 
-::placeholder{
-        color: white;
-}
-
-.container {
+.container { /*tło*/
     align-items: center;
     background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
     display: flex;
@@ -23,16 +19,32 @@ body {
     max-width: unset;
 }
 
-p {
-    color: #FFFFFF;
-    font: Bold 2.5em Arial Rounded MT;
+p { /*napis witamy*/
+    align-self: center;
     margin-bottom: 1em;
-    margin-top: -0.4em;
-    text-align: center;
-    letter-spacing: 0;
 }
 
-form {
+k { /*logo sklepu*/
+    align-items: center;
+    display: flex;
+    width: 30%;
+}
+
+k > img {
+    width: 40em;
+}
+
+s { /*zdjęcie sklepu*/
+    align-items: center;
+    display: flex;
+    width: 30%;
+}
+
+s > img {
+    width: 30em;
+}
+
+form { /*lewa strona strony startowej*/
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -41,7 +53,7 @@ form {
     width: 30%;
 }
 
-input {
+input { /*email i login*/
     background: transparent;
     border: 2px solid #BCE0FD;
     border-radius: 2em;
@@ -58,15 +70,15 @@ input:focus {
     box-shadow: 0 0 8px 0 white;
 }
 
-.inputWithIcon input {
+.input_icon input {
     padding-left: 3em;
 }
 
-.inputWithIcon {
+.input_icon {
     position: relative;
 }
 
-.inputWithIcon i {
+.input_icon i {
     color: white;
     left: 0;
     margin-top: 0.8em;
@@ -92,7 +104,7 @@ input:focus {
     padding-right: 1em;
 }
 
-.button1 {
+.button1 { /*mały przycisk 3 z góry*/
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 2px solid #BCE0FD;
     border-radius: 5em;
@@ -110,7 +122,7 @@ button[type="button"]:hover {
     box-shadow: 0 0 8px 0 white;
 }
 
-.button2 {
+.button2 { /*zarejestruj się*/
     background: transparent;
     border: 2px solid #BCE0FD;
     border-radius: 2em;
@@ -123,14 +135,14 @@ button[type="button"]:hover {
     text-align: center;
 }
 
-.button2 a {
+.button2 a { /*usuwamy podkreślenie*/
     color: #FFFFFF;
     font: Bold 1em Arial;
     text-align: center;
     text-decoration: none;
 }
 
-.button3 {
+.button3 { /*zaloguj sie przez google*/
     background: #F8F7F7 0% 0% no-repeat padding-box;
     border: 2px solid #BCE0FD;
     border-radius: 2em;
@@ -143,7 +155,7 @@ button[type="button"]:hover {
     text-align: center;
 }
 
-.button4 {
+.button4 { /*zaloguj sie używając konta apple*/
     background: #F8F7F7 0% 0% no-repeat padding-box;
     border: 2px solid #BCE0FD;
     border-radius: 2em;
@@ -154,31 +166,14 @@ button[type="button"]:hover {
     margin-top: 1em;
     padding: 0.7em;
     text-align: center;
-}
-
-.logo {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-
-.logo > img {
-    width: 12.5em;
 }
 
 @media only screen and (max-width: 992px) {
     .container {
         flex-direction: column;
     }
-
     form {
         width: 60%;
-    }
-
-    .logo > img {
-        margin-bottom: 2em;
-        width: 7.5em;
     }
     .button1 {
         width: 15%;
@@ -193,18 +188,10 @@ button[type="button"]:hover {
     form {
         width: 60%;
     }
-    .logo > img {
-        margin-bottom: 1.5em;
-        width: 7.5em;
-    }
-    p {
-        margin-top: 1em;
-    }
     .button1 {
         background: transparent;
         color: white;
         width: 20%;
-
     }
     .button3 {
         background: transparent;
