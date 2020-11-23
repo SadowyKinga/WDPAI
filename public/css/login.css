@@ -1,0 +1,209 @@
+body { /*strona startowa*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    margin: 0;
+    top: 0;
+    padding: 0;
+}
+
+.container { /*tło*/
+    align-items: center;
+    background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    justify-content: center;
+    margin: 0;
+    max-width: unset;
+}
+
+p { /*napis witamy*/
+    align-self: center;
+    margin-bottom: 1em;
+}
+
+k { /*logo sklepu*/
+    align-items: center;
+    display: flex;
+    width: 30%;
+}
+
+k > img {
+    width: 40em;
+}
+
+s { /*zdjęcie sklepu*/
+    align-items: center;
+    display: flex;
+    width: 30%;
+}
+
+s > img {
+    width: 30em;
+}
+
+form { /*lewa strona strony startowej*/
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    width: 30%;
+}
+
+input { /*email i login*/
+    background: transparent;
+    border: 2px solid #BCE0FD;
+    border-radius: 2em;
+    box-sizing: border-box;
+    color: white;
+    margin-bottom: 1em;
+    outline: none;
+    padding: 1em 1em 1em 1.5em;
+    transition: 0.3s;
+    width: 100%;
+}
+
+input:focus {
+    box-shadow: 0 0 8px 0 white;
+}
+
+.input_icon input {
+    padding-left: 3em;
+}
+
+.input_icon {
+    position: relative;
+}
+
+.input_icon i {
+    color: white;
+    left: 0;
+    margin-top: 0.8em;
+    margin-left: 0.8em;
+    padding: 9px 8px;
+    position: absolute;
+    top: 0;
+    transition: 0.3s;
+}
+
+.button2 > i {
+    display: inline;
+    padding-right: 1em;
+}
+
+.button3 > i {
+    display: inline;
+    padding-right: 1em;
+}
+
+.button4 > i {
+    display: inline;
+    padding-right: 1em;
+}
+
+.button1 { /*mały przycisk 3 z góry*/
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 5em;
+    margin: auto;
+    outline: 0;
+    padding: 1em;
+    width: 20%;
+}
+
+.button1:hover {
+    box-shadow: 0 0 8px 0 white;
+}
+
+button[type="button"]:hover {
+    box-shadow: 0 0 8px 0 white;
+}
+
+.button2 { /*zarejestruj się*/
+    background: transparent;
+    border: 2px solid #BCE0FD;
+    border-radius: 2em;
+    color: #FFFFFF;
+    font: Bold 1em Arial;
+    letter-spacing: 0;
+    margin-bottom: auto;
+    margin-top: 1em;
+    padding: 0.7em;
+    text-align: center;
+}
+
+.button2 a { /*usuwamy podkreślenie*/
+    color: #FFFFFF;
+    font: Bold 1em Arial;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button3 { /*zaloguj sie przez google*/
+    background: #F8F7F7 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 2em;
+    color: #0C81DF;
+    font: Bold 1em Arial;
+    letter-spacing: 0;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 0.7em;
+    text-align: center;
+}
+
+.button4 { /*zaloguj sie używając konta apple*/
+    background: #F8F7F7 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 2em;
+    color: #0C81DF;
+    font: Bold 1em Arial;
+    letter-spacing: 0;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 0.7em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    form {
+        width: 60%;
+    }
+    .button1 {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    form {
+        width: 60%;
+    }
+    .button1 {
+        background: transparent;
+        color: white;
+        width: 20%;
+    }
+    .button3 {
+        background: transparent;
+        color: white;
+    }
+    .button4 {
+        background: transparent;
+        color: white;
+    }
+    .button1 > i {
+        color: white;
+    }
+}
+
+
