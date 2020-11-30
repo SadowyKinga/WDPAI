@@ -1,7 +1,7 @@
 /*strona mojego profilu*/
 
 .wrapper .content .section .tables .left .photo{
-    background-image:url("../img/prof.jpg");
+    background-image:url("../img/myprofil.jpg");
     background-size: 10em;
     position: inherit;
     width: 155px;
