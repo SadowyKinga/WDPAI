@@ -15,6 +15,12 @@ class DefaultController extends AppController{ /*extends - dziedziczenie po klas
          //die("projects method");  //zatrzymanie interpretera
          $this ->render('profile');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
     }
+    
+     public function strona(){
+         //TODO display projects.html
+         //die("projects method");  //zatrzymanie interpretera
+         $this ->render('strona');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
+    }
 }
 
 
