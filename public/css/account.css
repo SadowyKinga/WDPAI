@@ -1,0 +1,287 @@
+body{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+  
+    .container{
+        background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+        margin: 0;
+        max-width: unset;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: inherit;
+        align-items: center;
+    }
+    
+    .logo{
+        display: flex;
+        flex-direction: column;
+        margin-top: -15em;
+        margin-bottom: 1em;
+        margin-left: -15em;
+        width: 45%;
+    }
+    
+    .logo > img {
+        width: 15em;
+    }
+    
+    .logo > p{
+        text-align: center;
+        font: Bold 2em Arial;
+        letter-spacing: 0;
+        color: #FFFFFF;
+        text-shadow: 0px 3px 6px #00000029;
+    }
+    
+    form{
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-bottom: 20em;
+        text-align: left;
+    }
+    
+    
+    form > input{
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #FFFFFF;
+        border-radius: 8px;
+        color: #2699FB;
+        text-align: left;
+        font:  1em Arial;
+        letter-spacing: 0;
+        padding: 0.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 98%;
+    
+    }
+    form > example > input{
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #FFFFFF;
+        border-radius: 8px;
+        color: #2699FB;
+        text-align: left;
+        font:  1em Arial;
+        letter-spacing: 0;
+        padding: 0.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 45%;
+    }
+
+    form > example1 > input{
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #FFFFFF;
+        border-radius: 8px;
+        color: #2699FB;
+        text-align: left;
+        font:  1em Arial;
+        letter-spacing: 0;
+        padding: 0.5em;
+        margin-top: 0.1em;
+        margin-left: 25em;
+        margin-bottom: 0;
+        width: 45%;
+    }
+    
+    form > p{
+        margin-top: 0.2em;
+        margin-bottom: 0.7em;
+        font: Bold 1.5em Arial;
+        letter-spacing: 0;
+        color: #FFFFFF;
+    
+    }
+    
+    form > k{
+        margin-top: -3.5em;
+        margin-left: 16.5em;
+        margin-bottom: 0.7em;
+        font: Bold 1.5em Arial;
+        letter-spacing: 0;
+        color: #FFFFFF;
+    }
+
+    form > h1{
+        margin-top: 0em;
+        margin-bottom: 0.7em;
+        font: Bold 4em Arial;
+        letter-spacing: 0;
+        color: #FFFFFF;
+    }
+    form > h2{
+        margin-top: -1em;
+        margin-bottom: 0em;
+        font: 2em Arial;
+        letter-spacing: 0;
+        color: #FFFFFF;
+    }
+
+    form > h3{
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        font: Bold 2em Arial;
+        letter-spacing: 0;
+        color: #FFFFFF;
+    }
+    
+    .button1:hover{
+        box-shadow: 0 0 20px 0 white;
+    }
+    
+    input:focus {
+        box-shadow: 0 0 20px 0 white;
+      }
+    
+    .button1{
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #FFFFFF;
+        border-radius: 0.5em;
+        margin-top: 1.5em;
+        margin-left: 38.5em;
+        padding: 0.7em 1em 0.7em 1em;
+        text-align: center;
+        font: Bold 1em Arial;
+        letter-spacing: 0;
+        color: #0B8FDD;
+        width: 20%;
+    }
+    
+    .button1 >i {
+        padding-left: 0.5em;
+        display: inline;
+        color: #0B8FDD;
+        font: Bold 1.2em Arial;
+    }
+    
+    @media only screen and (max-device-width: 992px){
+        body {
+            font-size: 1em;
+        }
+        .container {
+           flex-direction: column;
+       }
+    
+        form {
+           width: 20%;
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+        }
+    
+        .logo > img {
+            width: 6em;
+        }
+        
+        .button1{
+            width:10%;
+            font-size: 0.5em;
+        }
+    
+    }
+    
+    
+    @media screen and (max-width: 600px) {
+        ::placeholder{
+            color: white;
+        }
+    
+        body {
+            font-size: 1em;
+        }
+        .container {
+            flex-direction: column;
+        }
+    
+        form {
+            box-shadow: none;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            width: 60%;
+            height: 60%;
+            padding-bottom: 0.3em;
+            margin-top: 2em;
+    
+        }
+    
+        .logo{
+            display: none;
+        }
+    
+        
+        .button1{
+            width: 100%;
+            margin-top: 2.5em;
+            font-size: 0.7em;
+            color: black;
+            padding: 0.9em;
+        }
+     
+        .button1 > i{
+            color: black;
+            margin-left: 2.5em;
+            margin-right: -5em;
+        }
+        form > p{
+            display: none;
+        }
+
+
+    
+        form > input{
+            background: transparent;
+            border: 0.1em solid #FFFFFF;
+            border-radius: 2em;
+            color: #ffffff;
+            text-align: left;
+            font: 0.9em Arial;
+            letter-spacing: 0;
+            padding: 0.8em;
+            padding-left: 1em ;
+            margin-top: 0.8em;
+            margin-bottom: 0.8em;
+            width: 80%;
+        
+        }
+    
+        .header{
+            width: 100%;
+            margin-bottom: 3em;
+            margin-top: 0;
+            display: inline-block;
+        }
+    
+        h1{
+            display: inline-block;
+            font: Bold 1em Arial;
+            letter-spacing: 0;
+            color: #FFFFFF;
+        }
+    
+    
+        h2{
+            display: inline-table;
+            margin-top: 0;
+            font: Bold 0.9em Arial;
+            letter-spacing: 0;
+            color: #FFFFFF;
+            margin-bottom: 0;
+        }
+    
+
+    }
