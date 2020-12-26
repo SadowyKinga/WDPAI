@@ -259,13 +259,6 @@ body{
         
         }
     
-        .header{
-            width: 100%;
-            margin-bottom: 3em;
-            margin-top: 0;
-            display: inline-block;
-        }
-    
         h1{
             display: inline-block;
             font: Bold 1em Arial;
