@@ -11,4 +11,9 @@ Routing::get('strona', 'DefaultController'); /*scieżka do naszej apliakcji dzie
 Routing::get('account', 'DefaultController');
 Routing::get('messages', 'DefaultController');
 Routing::get('graphic', 'DefaultController');
+Routing::get('olderorders', 'DefaultController');
+Routing::get('orders', 'DefaultController');
+Routing::get('statements', 'DefaultController');
+Routing::get('users', 'DefaultController');
+Routing::get('workers', 'DefaultController');
 Routing::run($path); /*$path - argument*/
