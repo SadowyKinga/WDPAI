@@ -36,6 +36,31 @@ class DefaultController extends AppController{ /*extends - dziedziczenie po klas
         //die("projects method");  //zatrzymanie interpretera
         $this ->render('graphic');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
     }
+    public function olderorders(){
+        //TODO display projects.html
+        //die("projects method");  //zatrzymanie interpretera
+        $this ->render('olderorders');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
+    }
+    public function orders(){
+        //TODO display projects.html
+        //die("projects method");  //zatrzymanie interpretera
+        $this ->render('orders');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
+    }
+    public function statements(){
+        //TODO display projects.html
+        //die("projects method");  //zatrzymanie interpretera
+        $this ->render('statements');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
+    }
+    public function users(){
+        //TODO display projects.html
+        //die("projects method");  //zatrzymanie interpretera
+        $this ->render('users');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
+    }
+    public function workers(){
+        //TODO display projects.html
+        //die("projects method");  //zatrzymanie interpretera
+        $this ->render('workers');//wywołujemy metodę z klasy bazowej i przekazujemy do niej nazwe naszego pliku
+    }
 }
 
 
