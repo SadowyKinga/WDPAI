@@ -9,4 +9,6 @@ Routing::get('login', 'DefaultController'); /*jeżeli nie mamy podanej zadnej ś
 Routing::get('profile', 'DefaultController'); /*scieżka do naszej apliakcji dzieki niej otwieram ścieżke project z klasy defaultcontroller*/
 Routing::get('strona', 'DefaultController'); /*scieżka do naszej apliakcji dzieki niej otwieram ścieżke project z klasy defaultcontroller*/
 Routing::get('account', 'DefaultController');
+Routing::get('messages', 'DefaultController');
+Routing::get('graphic', 'DefaultController');
 Routing::run($path); /*$path - argument*/
