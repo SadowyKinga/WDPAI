@@ -1,0 +1,29 @@
+
+.content{
+    text-align: center;
+    background-color: #c5deeb;
+    border: 1px solid black;
+    
+}
+button{
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: 0.5em 1em 0.5em 1em;
+    font: 1em Arial;
+    margin-bottom: 2em;
+    font-weight: bold;
+
+}
+button:hover{
+    background:  #c5deeb;
+    font-weight: bold;
+}
+
+.table{
+    font-weight: bold;
+    border-collapse: collapse;
+}
+
+

@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.wrapper { /*pasek narzędzi po lewej stronie*/
+    display: flex;
+    height: inherit;
+    width: inherit;
+}
+
+
+#konto { /*ikonka z kontem - twoje konto*/
+    position: relative;
+    top: 5em;
+    align-items: center;
+    background: #c5deeb 0% 0% no-repeat padding-box;
+    border: 0.1em solid #c5deeb;
+    border-radius: 2em;
+    box-shadow: 0px 30px 30px blue;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+}
+
+#konto > a {
+    color: #002AF9;
+    font-size: 0.9em;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    font-weight: bold;
+}
+
+#konto > a > i {
+    color: blue;
+    margin-right: 0.3em;
+    scroll-padding-right: 0.2em;
+}
+
+.wrapper .sidebar {
+    align-items: center;
+    background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 70px;
+    position: fixed;
+    width: 12.5%;
+}
+
+.wrapper .sidebar .box { /*ikony z paska narzędzi*/
+    position: relative;
+    top: 5em;
+    background: transparent;
+    padding: 0.1em;
+    padding-left: 1em;
+    transition: .2s all;
+    width: 90%;
+}
+
+.wrapper .sidebar .box p {
+    color: white;
+}
+
+.wrapper .sidebar .box p i {
+    color: white;
+    margin-right: 0.5em;
+}
+
+.wrapper .sidebar:hover .box {
+    box-shadow: none;
+    opacity: .5;
+    transform: scale(.98);
+}
+
+.wrapper .sidebar:hover .box:hover p {
+    color: #002AF9;
+    font-weight: bold;
+}
+
+.wrapper .sidebar:hover .box:hover p i {
+    color: #002AF9;
+    font-weight: bold;
+}
+
+.wrapper .sidebar:hover .box:hover {
+    background: white;
+    filter: blur(0px);
+    opacity: 1;
+    padding-bottom: 0;
+    padding-left: 2em;
+    padding-top: 1em;
+    transform: scale(1);
+    font-weight: bold;
+}
+
+.wrapper .content { /*strona*/
+    height: inherit;
+    margin-left: 180px;
+    width: inherit;
+}
+
+.wrapper .content .header {
+    background: #002AF9 0% 0% no-repeat padding-box;
+    padding: 35px;
+    text-align: center;
+}
+
+.wrapper .content .header .logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    left: 0%;
+    position: fixed;
+    top: 0;
+    width: 20%;
+}
+
+#koszyk { /*logo*/
+    height: 8em;
+    width: 12em;
+}
+
+#napis {
+    height: 9em;
+    width: 16em;
+}
+
+.sidebar .closebtn {
+    display: none;
+}
+
+#sidebarCollapse {
+    display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .sidebar .closebtn {
+        color: white;
+        display: block;
+        font-size: 36px;
+        margin-left: 4em;
+        text-decoration: none;
+    }
+
+    #sidebarCollapse {
+        display: block;
+        left: 0;
+        position: relative;
+        top: 0em;
+        background: #002AF9;
+    }
+
+    #sidebarCollapse:after {
+        z-index: 0;
+    }
+
+    .wrapper .content {
+        margin-left: 0;
+    }
+
+    .wrapper .content .header .logo {
+        left: 25%;
+    }
+
+    .wrapper .sidebar {
+        background-color: #111; 
+        height: 100%; 
+        left: 0;
+        overflow-x: hidden; 
+        padding-top: 60px; 
+        position: fixed; 
+        top: 0; 
+        transition: 0.5s; 
+        width: 0; 
+        z-index: 1;
+    }
+}

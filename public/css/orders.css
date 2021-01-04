@@ -1,0 +1,291 @@
+
+.wrapper .content .section {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    overflow-y: auto;
+    text-align: center;
+    width: 100%;
+    background-color: #c5deeb;
+}
+
+.wrapper .content .section .godeep {
+    height: auto;
+    padding-right: 2em;
+    width: 100%;
+
+}
+
+
+.wrapper .content .section .godeep .goback {
+    font-weight: bold;
+    background: none;
+    border: 2px solid #002AF9;
+    border-radius: 0.5em;
+    color: #002AF9;
+    float: left;
+    margin-top: 1em;
+    outline: none;
+    padding: 0.5em 1em;
+    margin-left: 0.5%;
+    background-color:white;
+}
+
+.wrapper .content .section .godeep .neworder {
+    background: none;
+    font-weight: bold;
+    border: 2px solid #002AF9;
+    border-radius: 0.5em;
+    color: #002AF9;
+    float: left;
+    margin-top: 1em;
+    outline: none;
+    padding: 0.5em 1em;
+    margin-left: 20em;
+    background-color: white;
+}
+
+.wrapper .content .section .godeep .showorder {
+    background: none;
+    font-weight: bold;
+    border: 2px solid #002AF9;
+    border-radius: 0.5em;
+    color: #002AF9;
+    float: left;
+    margin-top: 1em;
+    outline: none;
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    background-color: white;
+}
+
+
+.wrapper .content .section .info button i {
+    margin-left: 0.5em;
+}
+
+.wrapper .content .section .godeep .neworder:hover {
+    background: green;
+    color: white;
+}
+.wrapper .content .section .godeep .showorder:hover {
+    background: blue;
+    color: white;
+}
+
+.wrapper .content .section .godeep .goback:hover {
+    background: red;
+    color: white;
+}
+
+.wrapper .content .section .godeep button i {
+    margin-left: 0.5em;
+}
+
+.wrapper .content .section .icons {
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+    padding-left: 4em;
+    padding-right: 10em;
+    width: 100%;
+}
+
+.wrapper .content .section .info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    
+}
+
+.wrapper .content .section .info form {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+
+}
+
+.wrapper .content .section .info form input {
+    background: #F1F9FF 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 10px;
+    margin-right: 1em;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+
+.wrapper .content .section .info .top {
+    display: inline-flex;
+    flex-direction: row;
+    height: auto;
+    margin-top: 3em;
+    padding-top: 1em;
+    text-align: left;
+}
+
+.wrapper .content .section .info .down {
+    display: inline-flex;
+    flex-direction: row;
+    height: auto;
+    margin-top: 2em;
+    padding-top: 1em;
+    text-align: left;
+}
+
+
+.wrapper .content .section .info p {
+    color: #c5deeb;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+.wrapper .content .section .bottom {
+    height: auto;
+    width: 100%;
+}
+
+.wrapper .content .section .bottom .table {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 3em;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.wrapper .content .section .bottom .table table {
+    align-self: center;
+    border-collapse: collapse;
+    height: auto;
+    width: 100%;
+}
+
+.wrapper .content .section .bottom .table table td {
+    border: 2px solid #2699FB
+}
+
+.wrapper .content .section .bottom .table table tr[class^="headings"] {
+    color: #00FE4C;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.wrapper .content .section .bottom .table table tr[class^="w"] td:last-child {
+    color: red;
+}
+
+.wrapper .content .section .bottom .table table tr[class^="w"] {
+    color: #2699FB;
+}
+
+.wrapper .content .section .bottom .table table tr:first-child td {
+    border-top: 0;
+}
+
+.wrapper .content .section .bottom .table table tr td:first-child {
+    border-left: 0;
+}
+
+.wrapper .content .section .bottom .table table tr:last-child td {
+    border-bottom: 0;
+}
+
+.wrapper .content .section .bottom .table table tr td:last-child {
+    border-right: 0;
+}
+
+::placeholder {
+    background: #F1F9FF;
+    color: #2699FB;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+
+    .wrapper .content .section .godeep .goback {
+        margin-top: 0.5em;
+    }
+
+
+    .wrapper .content .section .info div {
+        padding-bottom: 0.5em;
+    }
+
+    .wrapper .content .section .info .top {
+        display: inline-block;
+        margin-top: 0.5em;
+        padding-top: 0;
+    }
+
+    .wrapper .content .section .info .down {
+        display: inline-block;
+        margin-top: 0.5em;
+    }
+
+    .wrapper .content .section .bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        overflow-x: auto;
+        width: auto;
+    }
+
+    .wrapper .content .section .bottom .table {
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
+    .wrapper .content .section .bottom .table table td {
+        vertical-align: middle;
+
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+
+
+    .wrapper .content .section .godeep .goback {
+        margin-top: 0.5em;
+    }
+
+
+    .wrapper .content .section .info div {
+        padding-bottom: 0.5em;
+    }
+
+    .wrapper .content .section .info .top {
+        display: inline-block;
+        margin-top: 0.5em;
+        padding-top: 0;
+    }
+
+    .wrapper .content .section .info .down {
+        display: inline-block;
+        margin-top: 0.5em;
+    }
+
+    .wrapper .content .section .bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        overflow-x: auto;
+        width: auto;
+    }
+
+    .wrapper .content .section .bottom .table {
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
+    .wrapper .content .section .bottom .table table td {
+        vertical-align: middle;
+
+    }
+}

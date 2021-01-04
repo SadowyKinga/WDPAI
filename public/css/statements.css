@@ -1,0 +1,116 @@
+.wrapper .content .section {
+    display: flex;
+    flex-direction: row;
+    height: 91%;
+    overflow-y: auto;
+    text-align: center;
+    width: 100%;
+    background-color: #c5deeb;
+    
+}
+
+.wrapper .content .section .left {
+    height: auto;
+    width: 49%;
+
+}
+
+.wrapper .content .section  .photo{
+    width: 50%;
+    height: 80%;
+    margin-top: -39em;
+    margin-left: -41em;
+    border-radius: 10em;
+}
+.wrapper .content .section .first {
+    height: auto;
+    margin-top: 8em;
+    width: 100%;
+    margin-left: 10em;
+}
+
+.wrapper .content .section .left .first p {
+    color: #FF0000;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0px 3px 6px #00000045;
+    
+}
+
+
+
+.wrapper .content .section  .buttons {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2em;
+    margin-left: 11em;
+    margin-top: 3em;
+    width: 50%;
+    margin-left: 21em;
+    
+}
+.wrapper .content .section .second{
+    font-weight: bold;
+    margin-left: 21em;
+}
+.wrapper .content .section button {
+    background: none;
+    border: none;
+    color: black;
+    margin-bottom: 1em;
+    outline: none;
+    padding-right: 1em;
+    text-align: center;
+    
+}
+
+.wrapper .content .section  button i {
+    padding-left: 2em;
+}
+
+.wrapper .content .section  button:hover {
+    color: red;
+}
+
+
+/*FOURTH*/
+.wrapper .content .section .fourth {
+    height: 40%;
+    width: 50%;
+}
+
+.wrapper .content .section .fourth img {
+    border: 3px solid #0B8FDD;
+    box-shadow: 0px 7px 7px #00000045;;
+    height: 90%;
+    margin-left: -2%;
+    margin-top: 5em;
+    width: 90%;
+}
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .wrapper .content .section {
+        flex-direction: column;
+    }
+
+    .wrapper .content .section .left {
+        height: auto;
+        width: 100%;
+    }
+
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .wrapper .content .section {
+        flex-direction: column;
+    }
+
+    .wrapper .content .section .left {
+        height: auto;
+        width: 100%;
+    }
+}
+}
