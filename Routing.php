@@ -1,30 +1,40 @@
 
 <?php
 
-require_once 'src/controllers/DefaultController.php';
+require_once 'Controllers/SecurityController.php';
+require_once 'Controllers/PageController.php';
 
 class Routing {
-    public static $routes; /*tablica przechowujaca URL oraz ścieżkę kontrolera który zostanie otwarty*/
+    private $routes = [];
 
-    /*metoda, która pozwoli nam wstawić do tej tablicy  odpowiedni kontroler przydzielonydo określonego URLa*/
-    public static function get($url, $controller){
-        self::$routes[$url] = $controller;
+    public function __construct()
+
+    {
+        $this->routes = [
+            'page' => [
+                'controller' => 'PageController',
+                'action' => 'show'
+            ],
+            'login' => [
+                'controller' => 'SecurityController',
+                'action' => 'login'
+            ],
+            'logout' => [
+                'controller' => 'SecurityController',
+                'action' => 'logout'
+            ]
+        ];
     }
 
-    /*metoda, która pozwoli nam uruchomić dane kontroller, które zostały przypisane pod oknem określonego URL*/
-    public static function run($url){
-        /*wyciągamy pierwszy moduł URLa*/
-        $action = explode("/", $url)[0];  //explode - dzieli nam string wejściowy względem separatora, na szym przyadku separator to / 
-    
-        /*sprawdzamy czy w naszej tablicy istnieje taki element */
-        if(!array_key_exists($action, self::$routes)){ //$action - klucz
-            die("Wrong url");
-        }
-    
-        //TODO call controller method - implemnetacja
-        $controller = self::$routes[$action]; /*$action - klucz*/
-        $object = new $controller;
+    public function run()
+    {
+        $page = isset($_GET['page']) ? $_GET['page'] : 'login';
+        if (isset($this->routes[$page])) {
+            $controller = $this->routes[$page]['controller'];
 
-        $object -> $action(); /*wywołanie akcji z kontrollera jest za pomoca strzałki*/
+            $action = $this->routes[$page]['action'];
+            $object = new $controller;
+            $object->$action();
+        }
     }
 }
