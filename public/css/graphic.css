@@ -1,0 +1,177 @@
+.wrapper .content .section {
+    height: 91%;
+    overflow-y: scroll;
+    text-align: center;
+    width: 100%;
+    background-color: #c5deeb;
+}
+
+.wrapper .content .section .icons {
+    height: 20%;
+    margin-left: 8em;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    width: 15em;
+    
+}
+.wrapper .content .section .photo {
+    height: 0%;
+    margin-left: -0.3em;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    width: 10em;
+    
+}
+
+.wrapper .content .section .icons .date {
+    background: transparent;
+    border: 1px solid #002AF9;
+    border-radius: 20em;
+    color: #002AF9;
+    line-height: 2em;
+    padding: 0 1em;
+    width: 15em;
+    background-color: white;
+    margin-left: 1.5em;
+}
+.wrapper .content .section .icons .opinion {
+    background: transparent;
+    border: 1px solid #002AF9;
+    border-radius: 20em;
+    color: #002AF9;
+    line-height: 2em;
+    padding: 0 1em;
+    margin-top: -2.2em;
+    margin-left: 60em;
+    width: 15em;
+    background-color: white;
+
+}
+
+.wrapper .content .section .icons div:hover {
+    background: #c5deeb;
+    cursor: pointer;
+}
+
+/*TABELA */
+.wrapper .content .section  .table {
+    
+    height: 90%;
+    width: 88%;
+    margin-left: 9.4em;
+    border-collapse: collapse;
+}
+
+
+.wrapper .content .section  .table .sch {
+    
+    border-spacing: 1em;
+    height: 100%;
+    width: 100%;
+    margin-top: -5.5em;
+    border: 1px solid black;
+}
+
+.wrapper .content .section  .table .sch tr td {
+    
+    background: white;
+    border-color: black;
+    min-width: 150px;
+    border-left: 1px solid black;
+}
+
+
+
+.wrapper .content .section   .table .sch tr  d {
+    color: black;
+    margin-top: -20em;
+    position: relative;
+    margin-left: -8em;
+    background: rgb(188, 227, 243) 10% 10% padding-box;
+    border-radius: 0em;
+    font-weight: bold;
+    font-size:1em;
+}
+
+.wrapper .content .section  .table .sch tr d1 {
+    color: rgb(255, 255, 255);
+    margin-top: -20em;
+    position: relative;
+    margin-left: -7em;
+    background: rgb(241, 6, 6) 10em padding-box;
+    border-radius: 0em;
+    font-weight: bold;
+    font-size:1em;
+    
+}
+
+.wrapper .content .section  .table .sch tr td p {
+    color: black;
+    margin-top: -3.5em;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.wrapper .content .section   .table .sch tr td i {
+    color: black;
+    margin-top: -1em;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.wrapper .content .section   .table .sch  p0 {
+    color: black;
+    font-weight: bold;
+}
+
+
+.wrapper .content .section  .table .sch .w {
+    background-color: rgb(245, 137, 137);
+}
+
+@media only screen and (max-width: 992px) {
+
+    .wrapper .content .section .icons {
+        display: flex;
+        flex-direction: column;
+        height: 25%;
+        margin-left: -5em;
+    }
+
+    .wrapper .content .section  .table {
+        height: 80%;
+        margin-top: -2em;
+        overflow-x: auto;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .content .section .icons {
+        display: flex;
+        flex-direction: column;
+        height: 25%;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 0.5em;
+        padding-top: 1.5em;
+    }
+
+    .wrapper .content .section .icons .date {
+        margin-bottom: 0.5em;
+    }
+
+    .wrapper .content .section .icons button {
+        margin-bottom: 0.5em;
+    }
+
+    .wrapper .content .section  .table {
+        height: 80%;
+        margin-top: -2em;
+        overflow-x: auto;
+        width: 100%;
+    }
+}
