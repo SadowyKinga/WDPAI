@@ -1,8 +1,16 @@
+<?php
+if (!isset($_SESSION['id']) and !isset($_SESSION['role'])) {
+    die('You are not logged in!');
+}
+if (!in_array('ROLE_USER', $_SESSION['role'])) {
+    die('You do not have permission to watch this page!');
+}
+?>
+
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
+    <?php include("Common/headings.php") ?>
     <link rel="Stylesheet" type="text/css" href="../../Public/css/workers.css"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Pracownicy</title>
 </head>
 <body>
@@ -37,7 +45,9 @@
 </div>
 
 <div class="wrapper">
+    <?php include("Common/icons.php") ?>
     <div class="content">
+        <?php include("Common/company_sign.php") ?>
         <div class="section">
             <div class="e">
                 <div>
@@ -57,4 +67,3 @@
 </div>
 </body>
 </html>
-
