@@ -1,12 +1,24 @@
+<?php
+if (!isset($_SESSION['id']) and !isset($_SESSION['role'])) {
+    die('You are not logged in!');
+}
+if (!in_array('ROLE_USER', $_SESSION['role'])) {
+    die('You do not have permission to watch this page!');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+    <?php include("Common/headings.php") ?>
     <link rel="Stylesheet" type="text/css" href="../../Public/css/orders.css"/>
     <title>Zamówienia</title>
 </head>
 <body>
 <div class="wrapper">
+    <?php include("Common/icons.php") ?>
     <div class="content">
+        <?php include("Common/company_sign.php") ?>
         <div class="section">
             <div>
                 <button onclick="openNav()" id="sidebarCollapse" class="btn btn-info">
