@@ -16,13 +16,11 @@ body {
     width: 100%;
 }
 
-
 .wrapper { /*pasek narzędzi po lewej stronie*/
     display: flex;
     height: inherit;
     width: inherit;
 }
-
 
 #konto { /*ikonka z kontem - twoje konto*/
     position: relative;
