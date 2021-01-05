@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <?php include("Common/headings.php") ?>
     <link rel="Stylesheet" type="text/css" href="../../Public/css/login.css"/>
     <title>BrickShop</title>
 </head>
