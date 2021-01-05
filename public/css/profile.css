@@ -1,40 +1,334 @@
-/*strona mojego profilu*/
-
-.wrapper .content .section .tables .left .photo{
-    background-image:url("../img/myprofil.jpg");
-    background-size: 10em;
-    position: inherit;
-    width: 155px;
-    height: 155px;
-    border-radius: 80px;
-    margin-top: 1em;
-    background-color: white;
-    display: inline-block;
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-.wrapper .content .section .tables .left h1{
+body {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    height: inherit;
+    width: inherit;
+}
+
+#konto {
+    align-items: center;
+    background: #c5deeb 0% 0% no-repeat padding-box;
+    border: 0.1em solid #c5deeb;
+    border-radius: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    text-align: center;
+}
+
+#konto > a {
+    color: blue;
+    font-size: 1em;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    font-weight: bold;
+}
+
+#konto > a > i {
+    color: blue;
+    
+    margin-right: 0.3em;
+    scroll-padding-right: 0.2em;
+}
+
+.wrapper .sidebar {
+    align-items: center;
+    background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 70px;
+    position: fixed;
+    width: 12.5%;
+}
+
+.wrapper .sidebar .box {
+    position: relative;
+    top: 5em;
+    background: transparent;
+    padding: 0.1em;
+    padding-left: 1em;
+    transition: .2s all;
+    width: 100%;
+}
+
+#konto {
+    margin-bottom: 1.5em;
+    padding: 0.5em;
+}
+
+.wrapper .sidebar .box p {
+    color: white;
+    font-size: 1.1em;
+    margin-top: 0.1em;
+    margin-left: 0.5em;
+}
+
+.wrapper .sidebar .box p i {
+    color: white;
+    margin-right: 0.5em;
+}
+
+.wrapper .sidebar:hover .box {
+    box-shadow: none;
+    opacity: .5;
+    transform: scale(.98);
+}
+
+.wrapper .sidebar:hover .box:hover p {
+    color: #002AF9;
+    font-weight: bold;
+}
+
+.wrapper .sidebar:hover .box:hover p i {
+    color: #002AF9;
+    font-weight: bold;
+}
+
+.wrapper .sidebar:hover .box:hover {
+    background: white;
+    filter: blur(0px);
+    opacity: 1;
+    padding-bottom: 0;
+    padding-left: 2em;
+    padding-top: 1em;
+    transform: scale(1);
+    font-weight: bold;
+}
+
+.wrapper .content {
+    height: inherit;
+    margin-left: 180px;
+    width: inherit;
+}
+
+.wrapper .content .header {
+    background: #002AF9 0% 0% no-repeat padding-box;
+    padding: 35px;
+    text-align: center;
+}
+
+.wrapper .content .header .logo {
+    align-items: left;
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    position: fixed;
+    top: 0;
+    width: 20%;
+}
+
+#koszyk {
+    height: 8.5em;
+    width: 13em;
+    margin-left: -51em;
+    margin-top: 0.4em;
+}
+
+#napis {
+    height: 9em;
+    width: 19em;
+    margin-left: -1em;
+    margin-top: 0.4em;
+}
+
+.sidebar .closebtn {
+    display: none;
+
+}
+
+#sidebarCollapse {
+    display: none;
+}
+
+.w3-modal{
+    display:none;
+    overflow-x: scroll;
+    flex-direction: column;
+    text-align: center;
+}
+
+.w3-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.w3-container p{  
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.w3-container k{  
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+form input{
+    background-color: white;
+    border: 2.5px solid  black;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 0.5em;
+    margin-top: -2em;
+    padding: 0.2em 0.1em 0.2em 0.4em;
+    outline: none;
+    width: 40%;
+    height: 3em;
+}
+
+form{
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+form .data{
+    margin-top: -2em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+form .diffp{
+    margin-top: -2em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+form p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+form k{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.saved{
+    background: white;
+    border: 2px solid  green;
+    border-radius: 10px;
+    color: green;
+    padding: 0.5em 1em 0.5em 1em;
+    font: 1em Arial;
+    font-weight: bold;
+    margin: 0;
+}
+.saved:hover{
+    background:  #c5deeb;
+    font-weight: bold;
+}
+
+.saved i{
+    padding-left: 0.5em;
+    color:  green;
+}
+
+.saved{
+    display: block;
+    margin: auto;
+}
+
+.content3{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .content .section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color:#c5deeb;
+}
+
+.wrapper .content .section .tables {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    margin-top: 5%;
+    width: 90%;
+}
+
+.wrapper .content .section .tables .left {
+    background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0.6em;
+    height: 100%;
+    text-align: center;
+    width: 25%;
+}
+
+.wrapper .content .section .tables .left #imgname {
+    border-radius: 80px;
+    display: inline-block;
+    margin-top: 1em;
+    width: 10em;
+    height: 10em;
+}
+
+.wrapper .content .section .tables .left .picture {
+    width: 10em;
+    border-radius: 15em;
+}
+
+.wrapper .content .section .tables .left .info h1 {
     letter-spacing: 0;
     color: #FFFFFF;
     text-shadow: 0px 3px 6px #000000B3;
     font-size: 1.3em;
     font-display: bold;
     margin-top: 2em;
+    font-weight: bold;
 }
 
-.wrapper .content .section .tables .left p{
+.wrapper .content .section .tables .left .info p {
     letter-spacing: 0;
     color: #FFFFFF;
     font-size: 1em;
-    font-display: bold;
     margin-top: 0.5em;
     margin-bottom: 2em;
 }
 
-.wrapper .content .section .tables .left ul li{
+.wrapper .content .section .tables .left .info k {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+
+.wrapper .content .section .tables .left ul{
+    margin-top: 5em;
+}
+
+.wrapper .content .section .tables .left ul li {
     margin-bottom: 1.4em;
 }
 
-.wrapper .content .section .tables .left ul li button{
+.wrapper .content .section .tables .left ul li button {
+    
     background: transparent;
     color: white;
     border: none;
@@ -42,90 +336,295 @@
     text-shadow: 0px 3px 6px #000000C4;
 }
 
-.wrapper .content .section .tables .left ul li button:hover{
-    background: lightskyblue;
-    padding: 0.7em;
+.wrapper .content .section .tables .left ul li button:hover {
+    background: #c5deeb;
+    padding: 0.3em;
 }
 
-
-.wrapper .content .section .tables .right{ /*PRAWA STRONA*/
+.wrapper .content .section .tables .right {
     width: 75%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    border: 1px solid #17A1F6;
+    border: 1px solid #002AF9;
     border-radius: 0.6em;
     padding-top: 4em;
-    color: #2699FB;
+    color: #002AF9;
+    background: white;
 }
 
-.wrapper .content .section .tables .right .right_left{
+.wrapper .content .section .tables .right .r-left {
     width: 49%;
     height: inherit;
     text-align: center;
 }
 
-
 .wrapper .content .section .tables .right input:disabled{
-    background-color:   #F1F9FF;
-    color: red;
-    border: 2px solid #BCE0FD;
+    background-color:   #c5deeb;
+    color: blue;
+    border: 2px solid #002AF9;
     border-radius: 10px;
     padding: 0.2em 0.1em 0.2em 0.4em;
     margin-top: -2em;
     margin-bottom: 0.5em;
-    
 }
-.wrapper .content .section .tables .right .line{
-    width: 2%;
-    border-left: thick solid #B1E0FC;
-    border-left-width: 0.1em;
-    margin-bottom: 4em;
-    margin-top: 4em;
-    
-    
+
+.wrapper .content .section .tables .right input:enabled {
+    background-color: #c5deeb;
+    border: 2px solid #002AF9;
+    border-radius: 10px;
+    color: blue;
+    margin-bottom: 0.5em;
+    margin-top: -2em;
+    padding: 0.2em 0.1em 0.2em 0.4em;
 }
-.wrapper .content .section .tables .right .right_right{
+
+.wrapper .content .section .tables .right .r-right {
     width: 49%;
     height: inherit;
     text-align: center;
-    
 }
 
-.wrapper .content .section .tables .right .right_right .address{
+.wrapper .content .section .tables .right .r-right .adr {
     display: flex;
     flex-direction: row;
     text-align: center;
     width: inherit;
     height: 5em;
     margin: 1em 1em 0.2em 1em
-  
 }
 
-.wrapper .content .section .tables .right .right_right .address input{
+.wrapper .content .section .tables .right .r-right .adr input {
     width: 35%
 }
-.wrapper .content .section .tables .right .right_right .address .nr-flat p{
-  text-align: center;
+
+.wrapper .content .section .tables .right .r-right .adr .nr-mies p {
+    text-align: center;
 }
 
-.wrapper .content .section .tables .right .right_right .address .nr-house p{
-    text-align:center;
+.wrapper .content .section .tables .right .r-right .adr .wojew p {
+    text-align: center;
 }
 
-.wrapper .content .section .tables .right .right_right .address .nr-house{
+.wrapper .content .section .tables .right .r-right .adr .nr-dom p {
+    text-align: center;
+}
+
+.wrapper .content .section .tables .right .r-right .adr .nr-dom {
     width:50%;
     display:inline-block;
- 
 }
 
-.wrapper .content .section .tables .right .right_right .adr .nr-home{
+.wrapper .content .section .tables .right .r-right .adr .nr-mies {
     width:50%;
     display:inline-block;
     margin-left: -1em;
+}
 
+.wrapper .content .section .tables .right .r-right .adr .wojew {
+    width:50%;
+    display:inline-block;
+    margin-left: -1em;
+}
+
+.wrapper .content .section .tables .right .line {
+    border-left: thick solid #002AF9;
+    border-left-width: 0.1em;
+    margin-bottom: 4em;
+    margin-top: 4em;
+    width: 2%;
+}
+
+@media only screen and (max-width: 992px) {
+    .wrapper .content .section .tables {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .wrapper .content .section .tables .left {
+        display: flex;
+        flex-direction: row;
+        height: 20%;
+        width: 100%;
+    }
+
+    .wrapper .content .section .tables .left .picture {
+        height: 6em;
+        margin-left: 2em;
+        margin-right: 1em;
+        width: 6em;
+    }
+
+    .wrapper .content .section .tables .left .info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 25%;
+    }
+
+    .wrapper .content .section .tables .left .info h1 {
+        font-size: 1em;
+        margin-top: 2em;
+    }
+
+    .wrapper .content .section .tables .left ul {
+        height: 100%;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        width: 45%;
+    }
+
+    .wrapper .content .section .tables .left ul li {
+        font-size: 0.8em;
+        margin-bottom: 0.4em;
+    }
+
+    .wrapper .content .section .tables .left ul li button:hover {
+        padding: 0.3em;
+    }
+
+    .wrapper .content .section .tables .right {
+        height: 80%;
+        padding: 4em 0;
+        width: 100%;
+    }
+
+    .wrapper .content .section .tables .right .r-left {
+        font-size: 0.8em;
+        height: 100%;
+    }
+
+    .wrapper .content .section .tables .right .r-right {
+        font-size: 0.8em;
+        height: 100%;
+    }
+
+    .wrapper .content .section .tables .right .r-right .adr {
+        display: flex;
+        flex-direction: row;
+        height: 5em;
+        margin: 1em 0 0.2em 0;
+        text-align: center;
+        width: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .content .section .tables {
+        padding-top: 3em;
+    }
+
+    .wrapper .content .section .tables .left .picture {
+        height: 6em;
+        margin-left: 2em;
+        margin-right: 1em;
+        margin-top: 0em;
+        width: 6em;
+    }
+
+    .wrapper .content .section .tables .left .info h1 {
+        font-size: 1em;
+        margin-top: 1.5em;
+    }
+
+    .wrapper .content .section .tables .left .info p {
+        color: #FFFFFF;
+        font-size: 0.7em;
+    }
+
+    .wrapper .content .section .tables .right input:disabled {
+        margin: 0.5em;
+        width: 80%;
+    }
+
+    .wrapper .content .section .tables .right p {
+        margin-bottom: 0;
+        margin-top: 1em;
+    }
+
+    .wrapper .content .section .tables .right {
+        padding: 2em 0;
+    }
+
+    .wrapper .content .section .tables .right .r-right .adr {
+        display: flex;
+        flex-direction: column;
+        height: 10em;
+        margin-bottom: 2.3em;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .wrapper .content .section .tables .right .r-right {
+        margin-top: -2.5em;
+    }
+
+    .wrapper .content .section .tables .right .r-right .adr .nr-dom {
+        height: 50%;
+        margin-bottom: 2.3em;
+        width: 100%;
+    }
+
+    .wrapper .content .section .tables .right .r-right .adr .nr-mies {
+        height: 50%;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .wrapper .content .section .tables .right .r-right .adr .wojew {
+        height: 50%;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .wrapper .section #sidebarCollapse {
+        left: 0;
+        position: absolute;
+        top: 4.5em;
+    }
 }
 
 
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .sidebar .closebtn {
+        color: white;
+        display: block;
+        font-size: 36px;
+        margin-left: 4em;
+        text-decoration: none;
+    }
 
+    #sidebarCollapse {
+        display: block;
+        left: 0;
+        position: relative;
+        top: 0em;
+        background: #002AF9;
+    }
 
+    #sidebarCollapse:after {
+        z-index: 0;
+    }
+
+    .wrapper .content {
+        margin-left: 0;
+    }
+
+    .wrapper .content .header .logo {
+        left: 25%;
+    }
+
+    .wrapper .sidebar {
+        background-color: black;
+        height: 100%; 
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 60px; 
+        position: fixed; 
+        top: 0; 
+        transition: 0.5s; 
+        width: 0; 
+        z-index: 1; 
+    }
+}
