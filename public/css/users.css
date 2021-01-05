@@ -1,6 +1,7 @@
 .section{
     text-align: center;
 }
+
 button{
     background: white;
     border: 2px solid #BCE0FD;
@@ -9,8 +10,8 @@ button{
     padding: 0.5em 1em 0.5em 1em;
     font: 1em Arial;
     outline: none;
-
 }
+
 button:hover{
     background: #BCE0FD;
     font-weight: bold;
