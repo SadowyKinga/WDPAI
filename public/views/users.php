@@ -18,7 +18,6 @@ if ($user_role !== 'admin')
     <meta charset="UTF-8">
     <?php include('Common/headings.php'); ?>
     <link rel="Stylesheet" type="text/css" href="../../Public/css/users.css"/>
-    <script src="../../Public/js/admin.js"></script>
     <title>Admin panel</title>
 </head>
 <body>
