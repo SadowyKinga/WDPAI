@@ -13,9 +13,7 @@
     height: auto;
     padding-right: 2em;
     width: 100%;
-
 }
-
 
 .wrapper .content .section .godeep .goback {
     font-weight: bold;
@@ -59,7 +57,6 @@
     background-color: white;
 }
 
-
 .wrapper .content .section .info button i {
     margin-left: 0.5em;
 }
@@ -97,15 +94,13 @@
     height: auto;
     padding-left: 1em;
     padding-right: 1em;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .wrapper .content .section .info form {
     height: 100%;
     text-align: center;
     width: 100%;
-
 }
 
 .wrapper .content .section .info form input {
@@ -116,7 +111,6 @@
     padding: 0.5em 1em;
     text-align: center;
 }
-
 
 .wrapper .content .section .info .top {
     display: inline-flex;
@@ -135,7 +129,6 @@
     padding-top: 1em;
     text-align: left;
 }
-
 
 .wrapper .content .section .info p {
     color: #c5deeb;
@@ -205,14 +198,10 @@
     color: #2699FB;
 }
 
-
 @media screen and (min-width: 0px) and (max-width: 600px) {
-
-
     .wrapper .content .section .godeep .goback {
         margin-top: 0.5em;
     }
-
 
     .wrapper .content .section .info div {
         padding-bottom: 0.5em;
@@ -249,12 +238,9 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
-
-
     .wrapper .content .section .godeep .goback {
         margin-top: 0.5em;
     }
-
 
     .wrapper .content .section .info div {
         padding-bottom: 0.5em;
