@@ -1,12 +1,25 @@
+<?php
+if(!isset($_SESSION['id']) and !isset($_SESSION['role'])) {
+    die('You are not logged in!');
+}
+
+if(!in_array('ROLE_USER', $_SESSION['role'])) {
+    die('You do not have permission to watch this page!');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+    <?php include("Common/headings.php") ?>
     <link rel="Stylesheet" type="text/css" href="../../Public/css/graphic.css"/>
     <title>Grafik</title>
 </head>
 <body>
 <div class="wrapper">
+    <?php include("Common/icons.php") ?>
     <div class="content">
+        <?php include("Common/company_sign.php") ?>
         <link rel="Stylesheet" type="text/css" href="../../Public/css/graphic.css"/>
         <div class="section">
             <div>
@@ -16,15 +29,13 @@
             </div>
             <div class="photo">
             <img src='../../Public/img/pani_grafik.png'>
-</div>
-
+            </div>
             <div class="icons">
                 <div class="one" onclick="location.href='#';">
                     <div class="date">01.01.2021r - 31.01.2021r  <i class="fas fa-calendar-alt"></i></div>
                     <div class="opinion">Nowy grafik  <i class="fas fa-plus"></i></div>
                 </div>
             </div>
-            
             <div class="table">
                 <table class="sch">
                     <tr>
@@ -63,9 +74,7 @@
                         <td><d>16</d><p>9:00-17:00</p><i>Katarzyna Janik</i></td>
                         <td class="w"><d1>17</d1></td>
                     </tr>
-                    
                     <tr>
-                    
                         <td><d>18</d><p>9:00-17:00</p><i>Katarzyna Janik</i></td>
                         <td><d>19</d><p>9:00-17:00</p><i>Kacper Tomasiak</i></td>
                         <td><d>20</d><p>9:00-17:00</p><i>Marita Kaczmarczyk</i></td>
@@ -83,7 +92,6 @@
                         <td><d>30</d><p>9:00-17:00</p><i>Joanna Tomaszewska</i></td>
                         <td class="w"><d1>31</d1></td>
                     </tr>
-                    
                 </table>
             </div>
         </div>
