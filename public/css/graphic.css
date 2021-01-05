@@ -11,16 +11,15 @@
     margin-left: 8em;
     margin-right: 2em;
     margin-top: 0.5em;
-    width: 15em;
-    
+    width: 15em;  
 }
+
 .wrapper .content .section .photo {
     height: 0%;
     margin-left: -0.3em;
     margin-right: 2em;
     margin-top: 0.5em;
-    width: 10em;
-    
+    width: 10em; 
 }
 
 .wrapper .content .section .icons .date {
@@ -34,6 +33,7 @@
     background-color: white;
     margin-left: 1.5em;
 }
+
 .wrapper .content .section .icons .opinion {
     background: transparent;
     border: 1px solid #002AF9;
@@ -45,7 +45,6 @@
     margin-left: 60em;
     width: 15em;
     background-color: white;
-
 }
 
 .wrapper .content .section .icons div:hover {
@@ -53,18 +52,15 @@
     cursor: pointer;
 }
 
-/*TABELA */
+
 .wrapper .content .section  .table {
-    
     height: 90%;
     width: 88%;
     margin-left: 9.4em;
     border-collapse: collapse;
 }
 
-
 .wrapper .content .section  .table .sch {
-    
     border-spacing: 1em;
     height: 100%;
     width: 100%;
@@ -73,14 +69,11 @@
 }
 
 .wrapper .content .section  .table .sch tr td {
-    
     background: white;
     border-color: black;
     min-width: 150px;
     border-left: 1px solid black;
 }
-
-
 
 .wrapper .content .section   .table .sch tr  d {
     color: black;
@@ -102,7 +95,6 @@
     border-radius: 0em;
     font-weight: bold;
     font-size:1em;
-    
 }
 
 .wrapper .content .section  .table .sch tr td p {
@@ -132,7 +124,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-
     .wrapper .content .section .icons {
         display: flex;
         flex-direction: column;
@@ -146,7 +137,6 @@
         overflow-x: auto;
         width: 80%;
     }
-
 }
 
 @media screen and (max-width: 600px) {
