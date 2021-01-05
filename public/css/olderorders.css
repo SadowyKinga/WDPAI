@@ -3,8 +3,8 @@
     text-align: center;
     background-color: #c5deeb;
     border: 1px solid black;
-    
 }
+
 button{
     background: white;
     border: 2px solid black;
@@ -14,8 +14,8 @@ button{
     font: 1em Arial;
     margin-bottom: 2em;
     font-weight: bold;
-
 }
+
 button:hover{
     background:  #c5deeb;
     font-weight: bold;
@@ -25,5 +25,3 @@ button:hover{
     font-weight: bold;
     border-collapse: collapse;
 }
-
-
