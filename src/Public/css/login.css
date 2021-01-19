@@ -2,7 +2,7 @@
     outline: none;
 }
 
-body { /*strona startowa*/
+body { 
     width: 100%;
     height: 100%;
     position: fixed;
@@ -12,7 +12,7 @@ body { /*strona startowa*/
     padding: 0;
 }
 
-.container { /*tło*/
+.container {
     align-items: center;
     background: transparent linear-gradient(180deg, #002AF9 0%, #0B8FDD 100%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
     display: flex;
@@ -41,7 +41,8 @@ k { /*logo sklepu*/
 }
 
 k > img {
-    width: 40em;
+    width: 30em;
+    height: 10em;
 }
 
 s { /*zdjęcie sklepu*/
@@ -51,7 +52,7 @@ s { /*zdjęcie sklepu*/
 }
 
 s > img {
-    width: 30em;
+    width: 20em;
 }
 
 form { /*lewa strona strony startowej*/
@@ -173,7 +174,7 @@ button[type="button"]:hover {
     font: Bold 1em Arial;
     letter-spacing: 0;
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 0em;
     padding: 0.7em;
     text-align: center;
 }
@@ -190,7 +191,16 @@ button[type="button"]:hover {
     .button1 {
         width: 15%;
     }
+    s > img {
+        width: 18em;
+        margin-left: 5em;
+        margin-top: -3em;
+    }
+    k > img {
+        margin-left: 5em;
+    }
 }
+
 
 @media screen and (max-width: 600px) {
     .container {
@@ -202,22 +212,72 @@ button[type="button"]:hover {
     }
     
     .button1 {
-        background: transparent;
-        color: white;
-        width: 20%;
+        background: #F8F7F7 0% 0% no-repeat padding-box;
+        border: 2px solid #0B8FDD;
+        border-radius: 2em;
+        color: #0C81DF;
+        font: Bold 1em Arial;
+        width: 15%;
+        margin-left: 10em;
+    }
+    
+    .button2{
+        width: 75%;
+        margin-left: 3.5em;
     }
     
     .button3 {
-        background: transparent;
-        color: white;
+       background: #F8F7F7 0% 0% no-repeat padding-box;
+        border: 2px solid #0B8FDD;
+        border-radius: 2em;
+        color: #0C81DF;
+        font: Bold 1em Arial;
+        width: 75%;
+        margin-left: 3.5em;
     }
     
     .button4 {
-        background: transparent;
-        color: white;
+        background: #F8F7F7 0% 0% no-repeat padding-box;
+        border: 2px solid #0B8FDD;
+        border-radius: 2em;
+        color: #0C81DF;
+        font: Bold 1em Arial;
+        width: 75%;
+        margin-left: 3.5em;
     }
     
     .button1 > i {
         color: white;
+    }
+s > img {
+        width: 12em;
+        margin-left: 5em;
+        margin-top: -9em;
+    }
+    k > img {
+        width: 20em;
+        height: 8em;
+        margin-left: 15em;
+        margin-top: -5em;
+    }
+    p { /*napis witamy*/
+        align-self: center;
+        margin-bottom: 1em;
+        margin-top: 7em;
+        margin-left: 12em;
+    }
+    p > img{
+        height: 60%;
+    }
+    input { /*email i login*/
+        margin-left:5em;
+        width: 60%;
+    }
+    .input_icon i {
+        margin-left:5.5em
+    }
+    .messages{
+        margin-top: -3.5em;
+        margin-left: 2em;
     }
 }
