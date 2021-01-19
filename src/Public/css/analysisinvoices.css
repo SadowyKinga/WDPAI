@@ -1,0 +1,94 @@
+.section {
+    overflow-y: scroll;
+    height: 100%;
+    background-color: #c5deeb;
+}
+
+
+
+
+.wrapper .content  .uploads .picture {
+    width: 10em;
+    border-radius: 15em;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border-style: none;
+}
+
+
+.table td, .table th {
+    padding: .50em;
+    vertical-align: top;
+    border: 2px solid #c5deeb;
+    background-color: white;
+
+}
+.wrapper .content .uploads .section   .table  .w {
+    padding: .50em;
+    vertical-align: top;
+    border: 2px solid #c5deeb;
+    background: white;
+    font-weight: bold;
+}
+
+/*tekst Faktura nr 31/12/2021 */
+.wrapper .content .uploads p{
+    font-weight: bold;
+    color:black;
+    font-weight: bold;
+    margin-top: 1em;
+    font-size: 1.5em;
+    margin-left: 0em;
+}
+
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    margin-left: -5em;
+
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border-radius: 2em;
+    margin-left: -3em
+}
+
+input{
+    margin-left: -62em;
+
+}
+
+/*tło i kolor przycisku ->*/
+.section .table thead th:hover{
+    background:green;
+    color: white;
+}
+
+.wrapper .content .uploads .section{
+    background-color: #c5deeb;
+}
+.wrapper .content  .uploads{
+    text-align: center;
+}
+button{
+    background: #c5deeb;
+    border-radius: 10px;
+    color: green;
+    padding: 0.5em 1em 0.5em 1em;
+    font: 1em Arial;
+    margin-bottom: 2em;
+    border: 1px solid green;
+    font-size: 0.7em;
+
+}
+button:hover{
+    background: white;
+    font-weight: bold;
+}
+
+
+
