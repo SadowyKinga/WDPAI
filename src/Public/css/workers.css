@@ -50,7 +50,6 @@ form p{
     padding: 0.5em 1em 0.5em 1em;
     font: 1em Arial;
     font-weight: bold;
-    margin: 0;
 }
 
 #save:hover{
@@ -64,7 +63,7 @@ form p{
 }
 
 .wrapper .content .section {
-    height: 90%;
+    height: 91%;
     overflow: auto;
     text-align: center;
     width: 100%;
@@ -91,23 +90,50 @@ form p{
 
 .wrapper .content .section .e .sidemenu {
     background: #0B8FDD 0% 0% no-repeat padding-box;
-    border-radius: 1em;
+    border-radius: 2em;
     padding: 1em;
-    width: 70%;
+    width: 90%;
     display: block;
-    margin-left: 12em;
-    margin-top: 0.5em;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
+/*przycisku z menu górnego - dodaj, usuń pracownika, wyślij wiadomość, pobierz listę*/
 .wrapper .content .section .e .sidemenu button {
     background: transparent;
     border: none;
-    color: white;
+    color: #002AF9;
+    border-radius: 2em;
     padding: 0.7em;
+    font-weight: bold;
 }
 
-.wrapper .content .section .e .sidemenu button:hover {
-    background: #c5deeb;
+/*tło przycisku dodaj pracownika*/
+.wrapper .content .section .e .sidemenu .one:hover {
+    background: green;
+    color: white;
+    border-radius: 2em;
+    border: 2em;
+}
+
+/*tło przycisku usuń pracownika*/
+.wrapper .content .section .e .sidemenu .two:hover {
+    background: red;
+    color: white;
+    border-radius: 2em;
+}
+
+/*tło przycisku wyślij wiadomość*/
+.wrapper .content .section .e .sidemenu .three:hover {
+    background: blue;
+    color: white;
+}
+
+/*tło przycisku pobierz pracowników*/
+.wrapper .content .section .e .sidemenu .four:hover {
+    background: black;
+    color: white;
 }
 
 .wrapper .content .section .prof {
@@ -115,7 +141,7 @@ form p{
 }
 
 .wrapper .content .section .prof img {
-    border-radius: 12em;
+    border-radius: 2em;
     box-shadow: 0px 3px 6px #00000096;
     width: 150px;
 }
@@ -126,20 +152,26 @@ form p{
     font-weight: bold;
 }
 
+
 .wrapper .content .section .opis p {
     color: black;
     font-size: 0.7em;
     font-weight: bold;
+
 }
+
 
 #sidebarCollapse {
     display: none;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+
     .wrapper .content .section {
+
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
+
     }
 
     .wrapper .content .section .e {
@@ -154,6 +186,7 @@ form p{
         margin-left: 5%;
         margin-right: 5%;
         width: 90%;
+
     }
 
     .wrapper .content .section .prof img {
@@ -161,6 +194,8 @@ form p{
         box-shadow: 0px 3px 6px #00000096;
         width: 120px;
     }
+
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
