@@ -2,19 +2,27 @@
 <html>
 <head>
     <?php include("Common/headings.php") ?>
-    <link rel="Stylesheet" type="text/css" href="../Public/css/account.css" />
-    <script src="https://kit.fontawesome.com/f4dcd7aa64.js" crossorigin="anonymous"></script>
+    <link rel="Stylesheet" type="text/css" href="../../Public/css/account.css"/>
     <title>Zarejestruj się</title>
 </head>
 <body>
+<?php 
+if($userCreated) {
+    echo "
+        <script type=\"text/javascript\">
+            setTimeout(() => window.location.href = '/?page=login', 500)
+        </script>
+    ";
+}
+?>
 <div class='container'>
     <div class='logo'>
-            <p>  <img src='../Public/img/Logo.png'> <br> <img src='../Public/img/BrickShop.png'> </p>
+        <p>  <img src='../Public/img/Logo.png'> <br> <img src='../Public/img/BrickShop.png'> </p>
     </div>
-    <form action="?page=account" method="POST"> 
+    <form action="?page=account" method="POST">
     <h1> Załóż konto w BrickShop</h1>
     <h2>Aby założyć konto, wypełnij poniższe pola.</h2>
-    <h3>Twoje dane -------------------------------------------------------</h3>
+    <h3>Twoje dane -----------------------------------------------------</h3>
     <div class="mess">
         <?php
         if (isset($messages)) {
@@ -26,14 +34,14 @@
     </div>
     <p>Imię i nazwisko</p>
         <input name="name_surname" type="text" placeholder="imię i nazwisko">
-        <h3>Dane konta -------------------------------------------------------</h3>
+        <h3>Dane konta -----------------------------------------------------</h3>
         <p>Wybierz login</p>
         <input name="email" type="text" placeholder="email@mail.com" >
         <p>Hasło</p>
-        <input name="hasło" type="password" placeholder="●●●●●">
+        <input name="password_1" type="password" placeholder="●●●●●">
         <p>Powtórz hasło</p>
-        <input name="Powtórz hasło" type="password" placeholder="●●●●●" >
-        <button class='button1' type="submit"> <i>Załóż konto </i></button>
+        <input name="password_2" type="password" placeholder="●●●●●" >
+        <button class='button1' type="submit"> <i> Załóż konto </i></button>
     </form>
 </div>
 </body>
