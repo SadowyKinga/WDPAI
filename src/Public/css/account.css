@@ -66,7 +66,7 @@ body{
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 2px solid #FFFFFF;
         border-radius: 8px;
-        color: #2699FB;
+        color: black;
         text-align: left;
         font:  1em Arial;
         letter-spacing: 0;
@@ -117,15 +117,15 @@ body{
         margin-top: -3.5em;
         margin-left: 16.5em;
         margin-bottom: 0.7em;
+        color: #FFFFFF;
         font: Bold 1.5em Arial;
         letter-spacing: 0;
-        color: #FFFFFF;
     }
 
     form > h1{
         margin-top: 0em;
         margin-bottom: 0.7em;
-        font: Bold 4em Arial;
+        font: Bold 3.5em Arial;
         letter-spacing: 0;
         color: #FFFFFF;
     }
@@ -158,8 +158,8 @@ body{
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 2px solid #FFFFFF;
         border-radius: 0.5em;
-        margin-top: 1.5em;
-        margin-left: 38.5em;
+        margin-top: 1.2em;
+        margin-left: 36.5em;
         padding: 0.7em 1em 0.7em 1em;
         text-align: center;
         font: Bold 1em Arial;
@@ -175,128 +175,126 @@ body{
         font: Bold 1.2em Arial;
     }
     
-    @media only screen and (max-device-width: 992px){
-        body {
-            font-size: 1em;
-        }
-        
-        .container {
-           flex-direction: column;
-       }
-    
-        form {
-           width: 20%;
-        }
-        .logo{
-            display: flex;
-            flex-direction: row;
-        }
-    
-        .logo > img {
-            width: 6em;
-        }
-        
-        .button1{
-            width:10%;
-            font-size: 0.5em;
-        }
+@media only screen and (max-device-width: 992px){
+    body {
+        font-size: 1em;
+    }
+    .container {
+       flex-direction: column;
+   }
+    .logo {
+        display: flex;
+        flex-direction: column;
+        margin-top: -23em;
+        margin-bottom: 1em;
+        margin-left: -15em;
+    }
+
+    img{
+        width: 300px;
+        margin-left: 5em;
+    }
+
+    form {
+       width: 20%;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo > img {
+        width: 6em;
     }
     
-    @media screen and (max-width: 600px) {
-        ::placeholder{
-            color: white;
-        }
-    
-        body {
-            font-size: 1em;
-        }
-        
-        .container {
-            flex-direction: column;
-        }
-    
-        form {
-            box-shadow: none;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: left;
-            width: 60%;
-            height: 60%;
-            padding-bottom: 0.3em;
-            margin-top: 2em;
-        }
-    
-        .logo{
-            display: none;
-        }
-    
-        .button1{
-            width: 100%;
-            margin-top: 2.5em;
-            font-size: 0.7em;
-            color: black;
-            padding: 0.9em;
-        }
-     
-        .button1 > i{
-            color: black;
-            margin-left: 2.5em;
-            margin-right: -5em;
-        }
-            
-        form > p{
-            display: none;
-        }
-    
-        form > input{
-            background: transparent;
-            border: 0.1em solid #FFFFFF;
-            border-radius: 2em;
-            color: #ffffff;
-            text-align: left;
-            font: 0.9em Arial;
-            letter-spacing: 0;
-            padding: 0.8em;
-            padding-left: 1em ;
-            margin-top: 0.8em;
-            margin-bottom: 0.8em;
-            width: 80%;
-        }
+    .button1{
+        width: 70%;
+        font-size: 1em;
+        margin-left: 2.5em;
+    }
+    form > h1{
+        margin-left: -8em;
+        font: Bold 3em Arial;
+        margin-top: 4em;
+    }
+    form > h2 {
+        margin-top: -1em;
+        font: 1.5em Arial;
+        margin-left: -16em;
+    }
+    form > h3 {
+        font: Bold 1.5em Arial;
+        margin-left: -16em;
+    }
+    form > input {
+        width: 560px;
+        margin-left: -24em
+    }
 
-    .head {
-        display: inline-block;
-        margin-bottom: 3em;
-        margin-top: 0;
+    form > p {
+        margin-left: -16em;
+    }
+}
+    
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1em;
+    }
+    .container {
+        align-items: left;
+    }
+    .logo {
+        display: flex;
+        flex-direction: column;
+        margin-top: -23em;
+        margin-bottom: 1em;
+        margin-left: -15em;
+    }
+
+    img{
+        width: 250px;
+        margin-left: 3.5em;
+    }
+
+    form {
+        width: 20%;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo > img {
+        width: 6em;
+    }
+
+    .button1{
         width: 100%;
+        font-size: 0.8em;
+        margin-left: 10em;
     }
-
-    .head > i {
-        color: white;
-        padding-left: 5%;
-        padding-right: 27%;
+    form > h1{
+        margin-left: -8em;
+        font: Bold 1.5em Arial;
+        margin-top: 8em;
     }
-
-    h1 {
-        color: #FFFFFF;
-        display: inline-block;
-        font: Bold 1em Arial;
-        letter-spacing: 0;
-    }
-
-
-    h2 {
-        color: #FFFFFF;
-        display: inline-table;
-        font: Bold 0.9em Arial;
-        letter-spacing: 0;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-
-    .mess {
-        top: 12em;
+    form > h2 {
+        margin-top: -1em;
         font: 1em Arial;
+        margin-left: -12em;
+
+    }
+    form > h3 {
+        font: Bold 1em Arial;
+        margin-left: -10em;
+
+    }
+    form > input {
+        width: 400px;
+        margin-left: -10em
+    }
+
+    form > p {
+        margin-left: -6.5em;
     }
 }
