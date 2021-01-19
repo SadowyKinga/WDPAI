@@ -1,0 +1,275 @@
+/*główne okno*/
+.wrapper .content .section {
+    height: 91%;
+    overflow-y: scroll;
+    text-align: center;
+    width: 100%;
+    background-color: #c5deeb;
+}
+
+/*przycisk - przejdz do faktur archiwalnych*/
+.wrapper .content .section .goback{
+    background: none;
+    border: none;
+    color: #002AF9;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 40em;
+    margin-top: -20em;
+}
+
+/*podświetlenie przycisku - przejdz do faktur archiwalnych*/
+.wrapper .content .section .goback:hover{
+    color: black;
+}
+
+/*górna część strony głównej*/
+.wrapper .content .section .top_of_the_page {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    margin-bottom: -2em;
+    margin-top: -3em;
+    width: inherit;
+}
+
+/*nagłówke - Faktura + data */
+.wrapper .content .section h1 {
+    color: #002AF9;
+    font-size: 1.5em;
+    margin-bottom: -1em;
+    margin-left: 3.5em;
+    margin-top: -1em;
+    text-align: left;
+    font-weight: bold;
+}
+
+/*logo różowe semilac - po lewej stronie w górnym rogu*/
+.wrapper .content .section img{
+    height: 5em;
+    margin-top:2em;
+    margin-left: -75em;
+}
+
+/*okno podzielone na 3 części - str prawa, lewa oraz środek*/
+.wrapper .content .section .top_of_the_page .window {
+    border-radius: 64px;
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 4em;
+    width: 100%;
+}
+
+/*okienka nazwa firmy, nr rachunku, termin płatności*/
+.wrapper .content .section .top_of_the_page .window .left {
+    padding-top: 2em;
+    text-align: left;
+    width: 30%;
+    margin-left: 4em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+/*tekst nazwy firmy, nr rachunku, terminu płatności*/
+.wrapper .content .section .top_of_the_page .window .left p {
+    font-size: 1.2em;
+}
+
+/*okienka dane nazwy firmy, nr rachunku, terminu płatności*/
+.wrapper .content .section .top_of_the_page .window .center {
+    padding-left: 3em;
+    padding-top: 1em;
+    text-align: left;
+    width: 40%;
+    margin-top: 2em;
+}
+
+/*tekst dane nazwy firmy, nr rachunku, terminu płatności*/
+.wrapper .content .section .top_of_the_page .window .center p {
+    color: #002AF9;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: -9.5em;
+}
+
+/*tekst poznaj nasze najnowsze kolory*/
+.wrapper .content .section .top_of_the_page .window .center k {
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: -15.5em;
+}
+
+/*zdjęcie - czerwone paznockie*/
+.wrapper .content .section .top_of_the_page .window .right img{
+    margin-left: -1em;
+    width: 20em;
+    height: 20em;
+    border-radius: 1em;
+    margin-top: 6em;
+}
+
+/*zdjęcie - nowe kolory*/
+.wrapper .content .section .top_of_the_page .window .right .rr img{
+    margin-left: -80em;
+    width: 45em;
+    height: 30em;
+    border-radius: 1em;
+    margin-top: -18em;
+}
+
+/*tekst kwota do zapłaty*/
+.under p {
+    color: red;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-left: -20em;
+    margin-top: 18em;
+    padding-top: 2em;
+}
+
+/*przycisk szczegóły*/
+.wrapper .content .section .top_of_the_page .window  .goback {
+    background: none;
+    border: none;
+    color: #002AF9;
+    float: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: -10em;
+    margin-top: 27em;
+}
+
+/*przycisk szczegóły po najechaniu na niego kursorem*/
+.wrapper .content .section .top_of_the_page .window  .goback:hover {
+    background: #002AF9;
+    color: green;
+}
+
+/*inne rozmiary na inne urządzenia niż laptop/komputer*/
+@media screen and (max-width: 600px) {
+
+    .wrapper .content .section .top_of_the_page {
+        margin-bottom: -5em;
+    }
+    .wrapper .content .section .top_of_the_page .window .right .rr img{
+        margin-top: -15em;
+    }
+    .under p {
+        font-size: 1.5em;
+        margin-left: -9.5em;
+        margin-top: 13em;
+
+    }
+    .wrapper .content .section .top_of_the_page .window .goback {
+        font-size: 1em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .right img{
+        margin-left: -8em;
+        margin-top: 5em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 1em;
+        height: 70%;
+        margin: 0;
+        width: 100%;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .right p {
+        margin-top: -1em;
+
+    }
+
+    .wrapper .content .section .table .inv .headings p {
+        color: #000000;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .left {
+        margin-top: 1em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .left p {
+        font-size: 0.8em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .center {
+        margin-top: -0.2em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .center p {
+        font-size: 0.8em;
+        margin-top: 2.1em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .right {
+        font-size: 0.8em;
+        margin-left: 0em;
+        margin-top: 3em;
+        width: 50%;
+    }
+
+
+    .wrapper .content .section h1 {
+        color: #002AF9;
+        font-size: 1em;
+        margin-left: 1em;
+        margin-top: 1em;
+
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .wrapper .content .section .top_of_the_page .window {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8em;
+        height: 70%;
+        margin: 0;
+        margin-top: 4em;
+        width: 100%;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .right img{
+        margin-left: -8em;
+        width: 20em;
+        height: 20em;
+        border-radius: 1em;
+        margin-top: 6em;
+    }
+    .wrapper .content .section .goback {
+        margin-left: 30em;
+    }
+    .under p {
+        margin-left: -12em;
+        margin-top: 13em;
+    }
+    .wrapper .content .section .top_of_the_page .window .right .rr img {
+        margin-top: -15em;
+    }
+
+    .wrapper .content .section .top_of_the_page .window .right p {
+        margin-top: -1em;
+
+    }
+
+    .wrapper .content .section .table .inv .headings p {
+        color: #000000;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+}
