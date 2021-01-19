@@ -19,9 +19,9 @@ CREATE TABLE addresses (
     id_address SERIAL PRIMARY KEY,
     city VARCHAR(45),
     street VARCHAR(45),
-    house_number INTEGER,
-    apart_number INTEGER,
-    post_code INTEGER
+    house_number VARCHAR(7),
+    apart_number VARCHAR(7),
+    post_code VARCHAR(20)
 );
 
 CREATE TABLE pictures (
@@ -49,7 +49,7 @@ CREATE TABLE users (
     birth_date DATE,
     pesel VARCHAR(45),
     phone_number VARCHAR(9),
-    id_number VARCHAR(7)
+    id_number VARCHAR(25)
 );
 
 CREATE TABLE shifts (
@@ -105,16 +105,14 @@ CREATE TABLE prod_ord (
     PRIMARY KEY (id_product, id_order)
 );
 
-INSERT INTO companies(name, bank_account) VALUES ('Semilac ', '48115020567898000022');
-INSERT INTO pictures(path) VALUES ('Public/img/prof.jpg'), ('Public/img/Katarzyna.jpg');
-INSERT INTO shops(name, address) VALUES ('żabka', 'Kraków');
-
+INSERT INTO companies(name, bank_account) VALUES ('Semilac', '48115020567898000022'), ('Pepsi', '12398754972'), ('lenovo', '99854739875');
+INSERT INTO pictures(path) VALUES ('Public/img/prof.jpg'), ('Public/img/Joanna.jpg');
+INSERT INTO shops(name, address) VALUES ('Sephora', 'Warszawa'), ('żabka', 'Kraków'), ('Komputronik', 'Nowy Sącz');
+INSERT INTO products(name, price) VALUES('lakier - 052', 59.99), ('batonik - mars', 4.99), ('laptop -msi', 3054.99);
 INSERT INTO roles(name) VALUES ('kierownik'), ('magazynier'), ('sprzedawca');
-INSERT INTO addresses(city, street, house_number, apart_number, post_code) VALUES ('Nowy Sącz', 'Barska', 4, 48, 33-300);
+INSERT INTO workers(name_surname) VALUES ('kierownik'), ('magazynier'), ('sprzedawca');
+INSERT INTO addresses(city, street, house_number, apart_number, post_code) VALUES ('Nowy Sącz', 'Barska', 4, 48, 33300);
 /* hasło: 12345 */
-INSERT INTO users(id_role, id_picture, id_address, name_surname, password, email, birth_date, pesel, phone_number, id_number) 
+INSERT INTO users(id_role, id_picture, id_address, name_surname, password, email, birth_date, pesel, phone_number, id_number)
     VALUES (1, 1, 1, 'Katarzyna Janik', '$2y$10$uW6Dsu/eQ0p/5.TgoA6nXu1fd2gh9THrt.Tv37kniEkaB0tvdeusm', 'katarzyna@mail.com', '02-02-1996', '96022256987', '698425469', '123');
-INSERT INTO invoices(id_company, making_date, payment_date, id_shop) VALUES(1, '01-31-2021', '02-02-1996', 1);
-
-
-
+INSERT INTO invoices(id_company, making_date, payment_date, id_shop) VALUES(1, '01-31-2021', '12-31-2021', 1);

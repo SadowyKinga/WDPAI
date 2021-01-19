@@ -1,4 +1,4 @@
-<!--ikony na lewym pasku narzędzi -->
+<!--ikony na lewym pasku narzędzi - zakładki -->
 <div class="sidebar" id="mySideBar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div id='konto'>

@@ -1,6 +1,6 @@
 <?php
 
-class User
+class User /*klasa dla użytkownika by mógł korzystać z aplikacji webbowskiej po zalogowaniu się*/
 {
     private $id_user;
     private $name_surname;
@@ -19,7 +19,7 @@ class User
     private $apart_number;
     private $post_code;
 
-    
+    /*tworzymy konstruktor*/
     public function __construct(
         string $email,
         string $password,
@@ -34,8 +34,8 @@ class User
         string $city = null,
         string $street = null,
         string $post_code = null,
-        int $house_number = null,
-        int $apart_number = null
+        string $house_number = null,
+        string $apart_number = null
     )
     {
         $this->id_user = $id_user;
@@ -55,6 +55,7 @@ class User
         $this->post_code = $post_code;
     }
 
+    /*utworzenie getterów i tworzenie setterów*/
     public function getIdUser(): int
     {
         return $this->id_user;
@@ -87,56 +88,82 @@ class User
 
     public function getBirthDate()
     {
+        if(is_null($this->birth_date)) {
+            return "";
+        }
         return $this->birth_date;
     }
 
     public function getPhoneNumber(): string
     {
+        if(is_null($this->phone_number)) {
+            return "";
+        }
         return $this->phone_number;
     }
 
     public function getPesel(): string
     {
+        if(is_null($this->pesel)) {
+            return "";
+        }
         return $this->pesel;
     }
 
     public function getIdNumber(): string
     {
+        if(is_null($this->id_number)) {
+            return "";
+        }
         return $this->id_number;
     }
 
     public function getCity(): string
     {
+        if(is_null($this->city)) {
+            return "";
+        }
         return $this->city;
     }
 
     public function getStreet(): string
     {
+        if(is_null($this->street)) {
+            return "";
+        }
         return $this->street;
     }
 
-    public function getHouseNumber(): int
+    public function getHouseNumber(): string
     {
+       if(is_null($this->house_number)) {
+            return 0;
+        }
         return $this->house_number;
     }
 
-    public function getApartNumber(): int
+    public function getApartNumber(): string
     {
+        if(is_null($this->apart_number)) {
+            return 0;
+        }
         return $this->apart_number;
     }
 
-    public function getPostCode(): int
+    public function getPostCode(): string
     {
+         if(is_null($this->post_code)) {
+            return 0;
+        }
         return $this->post_code;
-    }
-
-    public function getVoivodeship(): string
-    {
-        return $this->voivo_deship;
     }
 
     public function getPathToPic(): string
     {
-        return $this->path_to_pic;
+       if($this->path_to_pic) {
+            return $this->path_to_pic;
+        } else {
+            return 'javascript:void';
+        }
     }
 }
