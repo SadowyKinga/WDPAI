@@ -4,8 +4,12 @@
     background-color: #c5deeb;
 }
 
-
-
+img.photo {
+    margin-left: 30.5em;
+    margin-top: 0.5em;
+    border-radius: 2em;
+    height: 73%;
+}
 
 .wrapper .content  .uploads .picture {
     width: 10em;
