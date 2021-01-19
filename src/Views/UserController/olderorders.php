@@ -22,12 +22,12 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">Imię i nazwisko zamawiającego</th>
-                        <th scope="col">Nazwa dostawcy</th>
-                        <th scope="col">Nazwa sklepu</th>
                         <th scope="col">Id zamówienia</th>
-                        <th scope="col">Data zamówienia</th>
-                        <th scope="col">Data dostarczenia</th>                   
+                        <th scope="col">Data utworzenia zamówienia</th>
+                        <th scope="col">Data dostarczenia zamówienia</th>
+                        <th scope="col">Nazwa sklepu</th>
+                        <th scope="col">Imię i nazwisko zamawiającego</th>
+                        <th scope="col">Nazwa dostawcy</th>                 
                     </tr>
                     </thead>
                     <tbody class="olderorders-list">
