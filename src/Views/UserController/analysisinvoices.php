@@ -21,12 +21,13 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
         <?php include("Common/company_sign.php") ?>
         <?php include("Common/headings.php") ?>
         <section class ="uploads">
-            <form enctype="multipart/form-data" action="?page=change_pic1" method="POST">
+            <form enctype="multipart/form-data" action="?page=analysisinvoices" id="myForm" method="POST">
                 <p>Zmień fakturę</p>
                 <input name="profile_img" type="file" required>
                 <button class="saved" type="submit">ZAPISZ <i class="fas fa-check"> </i></button>
             </form>
         </section>
+        <img class="photo" src="../Public/img/faktury.jpg" alt="Brak zdjęcia">
     </div>
 </div>
 </body>
