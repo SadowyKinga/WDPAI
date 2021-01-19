@@ -10,3 +10,6 @@ Link do repozytorium - https://github.com/SadowyKinga/WDPAI/tree/Application
 
 Link do diagramu ERD -
 -----------
+
+Link do założeń projektu - prototyp - https://github.com/SadowyKinga/WDPAI/tree/Application/Prototyp%20-%20za%C5%82o%C5%BCenia%20projektu
+--------------
