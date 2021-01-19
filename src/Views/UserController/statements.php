@@ -58,9 +58,10 @@ if(!in_array('ROLE_USER', $_SESSION['role'])) {
                         <img src="../../Public/img/zestawienie.png">
                     </div>
                     <div class="photo">
-                        <img src="../../Public/img/zysk.jpg">
-                    </div>
+            <img src="../../Public/img/zysk.jpg">
+</div>
                 </div>
+
             </div>
     </div>
 </div>
