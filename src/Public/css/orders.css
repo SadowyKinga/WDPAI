@@ -1,4 +1,4 @@
-
+/*tło - główne okno*/
 .wrapper .content .section {
     display: flex;
     flex-direction: column;
@@ -9,69 +9,74 @@
     background-color: #c5deeb;
 }
 
+/*rozłożenie górnych przycisków*/
 .wrapper .content .section .godeep {
     height: auto;
     padding-right: 2em;
     width: 100%;
 }
 
+/*przycisk przejdź do archiwalnych zamówień*/
 .wrapper .content .section .godeep .goback {
-    font-weight: bold;
     background: none;
-    border: 2px solid #002AF9;
-    border-radius: 0.5em;
+    border: 1px solid #c5deeb;
+    border-radius: 2em;
     color: #002AF9;
     float: left;
     margin-top: 1em;
     outline: none;
     padding: 0.5em 1em;
-    margin-left: 0.5%;
-    background-color:white;
+    margin-left: 1em;
+    font-weight: bold;
 }
 
+/*przycisk utwórz nowe zamówienie*/
 .wrapper .content .section .godeep .neworder {
     background: none;
-    font-weight: bold;
-    border: 2px solid #002AF9;
-    border-radius: 0.5em;
+    border: 1px solid #c5deeb;
+    border-radius: 2em;
     color: #002AF9;
     float: left;
     margin-top: 1em;
     outline: none;
     padding: 0.5em 1em;
-    margin-left: 20em;
-    background-color: white;
+    margin-left: 17em;
+    font-weight: bold;
 }
 
+/*przycisk odśwież tabelę*/
 .wrapper .content .section .godeep .showorder {
     background: none;
-    font-weight: bold;
-    border: 2px solid #002AF9;
-    border-radius: 0.5em;
+    border: 1px solid #c5deeb;
+    border-radius: 2em;
     color: #002AF9;
     float: left;
     margin-top: 1em;
     outline: none;
     padding: 0.5em 1em;
-    margin-left: 0.5em;
-    background-color: white;
+    margin-left: 1em;
+    font-weight: bold;
 }
 
 .wrapper .content .section .info button i {
     margin-left: 0.5em;
 }
 
+/*tło przycisku utwórz nowe zamówienie*/
 .wrapper .content .section .godeep .neworder:hover {
-    background: green;
-    color: white;
-}
-.wrapper .content .section .godeep .showorder:hover {
-    background: blue;
+    background: red;
     color: white;
 }
 
+/*tło przycisku odśwież tabelę*/
+.wrapper .content .section .godeep .showorder:hover {
+    background: green;
+    color: white;
+}
+
+/*tło przycisku przejdź do archiwalnych zamówień*/
 .wrapper .content .section .godeep .goback:hover {
-    background: red;
+    background: #002AF9;
     color: white;
 }
 
@@ -79,7 +84,7 @@
     margin-left: 0.5em;
 }
 
-.wrapper .content .section .icons {
+.wrapper .content .section .navbar {
     display: flex;
     flex-direction: row;
     height: 15%;
@@ -94,18 +99,20 @@
     height: auto;
     padding-left: 1em;
     padding-right: 1em;
-    width: 100%;   
+    width: 100%;
 }
 
 .wrapper .content .section .info form {
     height: 100%;
     text-align: center;
     width: 100%;
+
 }
 
+/*okienka z wypełnionymi danymi - 5 okienek*/
 .wrapper .content .section .info form input {
-    background: #F1F9FF 0% 0% no-repeat padding-box;
-    border: 2px solid #BCE0FD;
+    background: white 0% 0% no-repeat padding-box;
+    border: 2px solid #002AF9;
     border-radius: 10px;
     margin-right: 1em;
     padding: 0.5em 1em;
@@ -130,9 +137,9 @@
     text-align: left;
 }
 
+
 .wrapper .content .section .info p {
-    color: #c5deeb;
-    font-weight: bold;
+    color: #002AF9;
     font-size: 0.8em;
     margin-bottom: 0;
 }
@@ -159,13 +166,16 @@
     width: 100%;
 }
 
+/*tabelka na stronie głównej*/
 .wrapper .content .section .bottom .table table td {
-    border: 2px solid #2699FB
+    border: 2px solid #c5deeb;
+    background-color: white;
 }
 
+/*tekst nazwa produktu, nr produktu, ilość*/
 .wrapper .content .section .bottom .table table tr[class^="headings"] {
-    color: #00FE4C;
-    font-size: 1.2em;
+    color: black;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -174,7 +184,7 @@
 }
 
 .wrapper .content .section .bottom .table table tr[class^="w"] {
-    color: #2699FB;
+    color: black;
 }
 
 .wrapper .content .section .bottom .table table tr:first-child td {
@@ -193,15 +203,20 @@
     border-right: 0;
 }
 
-::placeholder {
-    background: #F1F9FF;
-    color: #2699FB;
+/*tło w inpucie - inaczej dane zamawiającego */
+.wrapper .content .section .info .top ::placeholder {
+    background: white;
+    color: black;
 }
 
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
+
+
     .wrapper .content .section .godeep .goback {
         margin-top: 0.5em;
     }
+
 
     .wrapper .content .section .info div {
         padding-bottom: 0.5em;
@@ -238,10 +253,14 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
+
+    .wrapper .content .section .godeep .neworder{
+        margin-left: 8em;
+    }
     .wrapper .content .section .godeep .goback {
         margin-top: 0.5em;
+        margin-left: 12em;
     }
-
     .wrapper .content .section .info div {
         padding-bottom: 0.5em;
     }
@@ -274,4 +293,46 @@
         vertical-align: middle;
 
     }
+}
+
+.product-quant {
+    max-width: 80px;
+}
+
+.product {
+    margin-left: auto;
+    margin-bottom: 1em;
+}
+
+/*utwórz zamówienie - dodaj produkty*/
+.product > input, .product > select {
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 0.5em;
+    margin-top: -2em;
+    padding: 0.2em 0.1em 0.2em 0.4em;
+    outline: none;
+    width: 30.2%;
+    height: 3em;
+}
+
+/*utwórz nowe zamówienie - dodaj produkty*/
+.product-add {
+    cursor: pointer;
+    padding: 5px;
+    max-width: 150px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    border: 2.5px solid black;
+    background-color: white;
+}
+
+/*tło przycisku: utwórz nowe zamówienie - dodaj produkty*/
+.product-add:hover {
+    background: green;
+    color: white;
+    border: 2px solid green;
 }
