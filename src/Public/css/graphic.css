@@ -42,7 +42,7 @@
     line-height: 2em;
     padding: 0 1em;
     margin-top: -2.2em;
-    margin-left: 60em;
+    margin-left: 59em;
     width: 15em;
     background-color: white;
 }
@@ -52,11 +52,10 @@
     cursor: pointer;
 }
 
-
 .wrapper .content .section  .table {
-    height: 90%;
-    width: 88%;
-    margin-left: 9.4em;
+    height: 88%;
+    width: 85%;
+    margin-left: 11.4em;
     border-collapse: collapse;
 }
 
@@ -117,7 +116,6 @@
     color: black;
     font-weight: bold;
 }
-
 
 .wrapper .content .section  .table .sch .w {
     background-color: rgb(245, 137, 137);
