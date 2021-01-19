@@ -6,20 +6,21 @@ if(!isset($_SESSION['id']) and !isset($_SESSION['role'])) {
 if(!in_array('ROLE_USER', $_SESSION['role'])) {
     die('You do not have permission to watch this page!');
 }
-
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <?php include("Common/headings.php") ?>
-    <link rel="Stylesheet" type="text/css" href="../Public/css/page.css" />
+    <link rel="Stylesheet" type="text/css" href="../../Public/css/page.css"/>
     <title>Strona Główna</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="logo">
-            <img class="koszyk" src="../Public/img/Logo.png" alt="Brak zdjęcia">
-            <img class="napis" src="../Public/img/BrickShop.png" alt="Brak zdjęcia">
-        </div>
+
+<div class="wrapper">
+    <div class="logo" id="logo">
+        <img class="koszyk" src="../Public/img/Logo.png" alt="Brak zdjęcia">
+        <img class="napis" src="../Public/img/BrickShop.png" alt="Brak zdjęcia">
+    </div>
     <div class="a">
         <button class="okno1" onclick="location.href='?page=profile';" style="cursor: pointer;">
             <a1><img id="inscription" src='../Public/img/moj profil.png'></a1>
