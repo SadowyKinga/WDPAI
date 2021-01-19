@@ -1,27 +1,39 @@
+.section {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border: 2px solid #c5deeb;
+    background-color: white;
+}
+
+.wrapper .content .section{
+    background-color: #c5deeb;
+}
 
 .content{
     text-align: center;
-    background-color: #c5deeb;
-    border: 1px solid black;
 }
 
 button{
-    background: white;
-    border: 2px solid black;
+    background: #c5deeb;
     border-radius: 10px;
-    color: black;
+    color: #002AF9;
     padding: 0.5em 1em 0.5em 1em;
     font: 1em Arial;
     margin-bottom: 2em;
-    font-weight: bold;
+    border: 1px solid #002AF9;
 }
 
 button:hover{
-    background:  #c5deeb;
+    background:  white;
     font-weight: bold;
 }
 
-.table{
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
     font-weight: bold;
-    border-collapse: collapse;
 }
