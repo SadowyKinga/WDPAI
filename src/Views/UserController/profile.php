@@ -18,77 +18,24 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
 </head>
 <body>
 
-<!-- formularz zmiany danych -->
-<div id="mod2" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-        <header class="w3-container w3-blue">
-        <span onclick="document.getElementById('mod2').style.display='none'"
-              class="w3-button w3-display-topright">&times;</span>
-            <div class="w3-container">
-                <p>Zmiana danych</p>
-        </header>
-        <div class="content3">
-                <form action="?page=change_data" method="POST"><k>DANE OSOBOWE</k>
-                    <p>Data urodzenia</p>
-                    <input name="birth_date" type="date">
-                    <p>Pesel</p>
-                    <input name="pesel" type="text">
-                    <p>Numer telefonu</p>
-                    <input name="phone_number" type="text">
-                    <p>Numer identyfikatora</p>
-                    <input name="id_number" type="text">
-                    <p>E-mail</p>
-                    <input name="email" type="text">
-                    <p> </p>
-                    <k>ADRES ZAMIESZKANIA</k>
-                    <p>Miejscowość</p>
-                    <input name="city" type="text">
-                    <p>Ulica</p>
-                    <input name="street" type="text">
-                    <p>Kod pocztowy</p>
-                    <input name="post_code" type="text">
-                    <p>Numer domu</p>
-                    <input name="house_number" type="text">
-                    <p>Numer mieszkania</p>
-                    <input name="apart_number" type="text">
-                    <p>Województwo</p>
-                    <input name="voivodeship" type="text">
-                    <button class="saved" type="submit">ZAPISZ<i class="fas fa-check"> </i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- formularz zmiany zdjęcia profilowego -->
-<div id="mod1" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-        <header class="w3-container w3-blue">
-        <span onclick="document.getElementById('mod1').style.display='none'"
-              class="w3-button w3-display-topright">&times;</span>
-            <div class="w3-container">
-                <p>Zmiana zdjęcia profilowego</p>
-        </header>
-        <div class="content">
-            <form action="?page=change_pic" method="POST">
-                <p> Podaj ścieżkę do nowego zdjęcia profilowego</p>
-                <input name="path_to_pic" type="text">
-                <button class="saved" type="submit">ZAPISZ<i class="fas fa-check"> </i></button>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
-
 <!-- formularz zmiany hasła -->
+<script>
+    function toggleModal(modalId) {
+        const x = document.getElementById(modalId);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+
 <div id="mod" class="w3-modal">
     <div class="w3-modal-content w3-card-4">
         <header class="w3-container w3-blue">
-        <span onclick="document.getElementById('mod').style.display='none'"
-              class="w3-button w3-display-topright">&times;</span>
-            <div class="w3-container">
-                <p>Zmiana hasła</p>
+            <p>Zmiana hasła</p>
+            <span onclick="toggleModal('mod')" class="w3-button w3-display-topright">X</span>
         </header>
         <div class="content">
             <form action="?page=change_pass" method="POST">
@@ -103,14 +50,65 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
         </div>
     </div>
 </div>
+
+<!-- formularz zmiany zdjęcia profilowego -->
+<div id="mod1" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+    <header class="w3-container w3-blue">
+        <p>Zmiana zdjęcie profilowe</p>
+        <span onclick="toggleModal('mod1')" class="w3-button w3-display-topright">X</span>
+    </header>
+        <div class="content">
+            <form enctype="multipart/form-data" action="?page=change_pic" method="POST">
+                <p>Dodaj zdjęcie profilowe</p>
+                <input name="profile_img" type="file">
+                <button class="saved" type="submit">ZAPISZ<i class="fas fa-check"> </i></button>
+            </form>
+        </div>
+    </div>
 </div>
 
+<!-- formularz zmiany danych -->
+<div id="mod2" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+        <header class="w3-container w3-blue">
+            <p>Zmiana danych</p>
+            <span onclick="toggleModal('mod2')" class="w3-button w3-display-topright">X</span>
+        </header>
+        <div class="content3">
+                <form action="?page=change_data" method="POST"><k>DANE OSOBOWE</k>
+                    <p> Data urodzenia</p>
+                    <input name="birth_date" type="date">
+                    <p> Pesel</p>
+                    <input name="pesel" type="text">
+                    <p> Numer telefonu</p>
+                    <input name="phone_number" type="text">
+                    <p> Numer identyfikatora</p>
+                    <input name="id_number" type="text">
+                    <p> </p>
+                    <k>ADRES ZAMIESZKANIA</k>
+                    <p>Miejscowość</p>
+                    <input name="city" type="text">
+                    <p> Ulica</p>
+                    <input name="street" type="text">
+                    <p> Kod pocztowy</p>
+                    <input name="post_code" type="text">
+                    <p> Numer domu</p>
+                    <input name="house_number" type="text">
+                    <p> Numer mieszkania</p>
+                    <input name="apart_number" type="text">
+                    <button class="saved" type="submit">ZAPISZ<i class="fas fa-check"> </i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- sekcja główna strony-->
 <div class="wrapper">
     <?php include("Common/icons.php") ?>
     <div class="content">
         <?php include("Common/company_sign.php") ?>
-        
-        <!--SEKCJA GŁÓWNA STRONY-->
         <div class="section">
             <div>
                 <button onclick="openNav()" id="sidebarCollapse" class="btn btn-info">
@@ -137,6 +135,7 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
                             <button type="button" onclick="ChangePass()">ZMIEŃ HASŁO</button>
                         </li>
                     </ul>
+
                 </div>
 
                 <div class="right">
@@ -148,8 +147,7 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
                             <p>PESEL</p>
                             <input id="pesel" type="text" placeholder="<?php echo $user->getPesel() ?>" disabled>
                             <p>NUMER TELEFONU</p>
-                            <input id="nrt" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                                   placeholder="<?php echo $user->getPhoneNumber() ?>" disabled>
+                            <input id="nrt" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="<?php echo $user->getPhoneNumber() ?>" disabled>
                             <p>NUMER IDENTYFIKATORA</p>
                             <input id="nrid" type="text" placeholder="<?php echo $user->getIdNumber() ?>" disabled>
                             <p>E-MAIL</p>
@@ -176,8 +174,8 @@ if (!in_array('ROLE_USER', $_SESSION['role'])) {
                                     <input id="nrm" type="text" placeholder="<?php echo $user->getApartNumber() ?>" disabled>
                                 </div>
                             </div>
-                            <p>WOJEWÓDZTWO</p>
-                            <input id="voiv" type="text" placeholder="<?php echo $user->getVoivodeship() ?>" disabled>
+                            <p>Województwo</p>
+                            <input name="voivodeship" type="text" placeholder="Małopolskie" disabled>
                         </form>
                     </div>
                 </div>
